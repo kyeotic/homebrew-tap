@@ -1,22 +1,22 @@
 class VaultSync < Formula
   desc "A CLI tool for syncing secret files across devices"
   homepage "https://github.com/kyeotic/vault-sync"
-  version "0.8.0"
+  version "0.9.0"
 
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/kyeotic/vault-sync/releases/download/v#{version}/vault-sync-aarch64-apple-darwin.tar.gz"
-      sha256 "2395155ac2edcda4f67ab538dc14e8adbf37250471cb4973bcc10ac8dc64b48c"
+      sha256 "c300be58d1cfe8723c4cae0e8686a2a03e6127bcdfe7a33643c19528e604e738"
     else
       url "https://github.com/kyeotic/vault-sync/releases/download/v#{version}/vault-sync-x86_64-apple-darwin.tar.gz"
-      sha256 "837c34d4ff71e0137f3cb35e2165eee1106eb8eac3c83d881eca0c97234ba743"
+      sha256 "f3fac9e418bfba68253a3d1293c0d3e594986101881fa4931f56533c90d4c11d"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
       url "https://github.com/kyeotic/vault-sync/releases/download/v#{version}/vault-sync-x86_64-unknown-linux-musl.tar.gz"
-      sha256 "5e01cbfa6ab9bfa5bb0d072124e874d47ae84631032129de1c05d41b827398cd"
+      sha256 "82fc4b98a1ce453fd4236893cf12f5c84cf0b0de597f6a4c2eecd14b87075faa"
     end
   end
 
